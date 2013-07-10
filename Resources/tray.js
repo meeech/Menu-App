@@ -4,7 +4,7 @@ var tray = Ti.UI.addTray('tray.png'),
     //Add some menu items
     menuItems = [
 
-        Titanium.UI.createMenuItem('Change Icon', function(e) {
+        Ti.UI.createMenuItem('Change Icon', function(e) {
             //Something's going on... let's change the icon.
             tray.setIcon('tray-active.png');
             setTimeout(function() {
@@ -12,11 +12,11 @@ var tray = Ti.UI.addTray('tray.png'),
             }, 3000);
         }),
         
-        Titanium.UI.createMenuItem('Cat', function(e) {
+        Ti.UI.createMenuItem('Cat', function(e) {
             alert('Meow Meow');
         }),
         
-        Titanium.UI.createMenuItem('Quit', function(e) {
+        Ti.UI.createMenuItem('Quit', function(e) {
             confirm('You sure?', function() {
                 Ti.App.exit();                
             });
